@@ -1,0 +1,27 @@
+[project]
+name = "project"
+version = "0.1.0"
+
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "jupyter>=1.1.1",
+    "torch==2.8.0+cu128",
+    "triton-windows<3.5",
+    "unsloth[cu128-ampere-torch280]",
+]
+
+[dependency-groups]
+dev = ["ruff>=0.12.10"]
+flash-attn = ["flash-attn<2.8"]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+unsloth = { git = "https://github.com/unslothai/unsloth.git" }
+
+[tool.uv.extra-build-dependencies]
+flash-attn = ["torch"]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
