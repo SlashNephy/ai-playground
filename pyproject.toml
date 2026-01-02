@@ -14,7 +14,7 @@ dev = ["ruff>=0.12.10"]
 
 [tool.uv.sources]
 torch = { index = "pytorch-cu128" }
-unsloth = { git = "https://github.com/unslothai/unsloth.git", rev = "264911916c28564f4153542aca51793bd0653e79" }
+unsloth = { git = "https://github.com/unslothai/unsloth.git", rev = "842e8d89b180289ec861474bcdc9b74cc6dca2d8" }
 
 [[tool.uv.index]]
 name = "pytorch-cu128"
