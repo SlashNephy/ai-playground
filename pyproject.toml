@@ -5,7 +5,7 @@ version = "0.1.0"
 requires-python = ">=3.13,<3.14"
 dependencies = [
     "jupyter>=1.1.1",
-    "torch==2.8.0+cu128",
+    "torch==2.10.0+cu128",
     "unsloth[windows, cu128-ampere-torch280]",
 ]
 
